@@ -1,24 +1,148 @@
-## Basic
-1. [x] Hello World Program  
-2. [x] Odd or Even Checker 
-3. [x] Sum of Numbers 
-4. [x] Multiplication Table 
-5. [x] Factorial Calculation 
-6. [x] Simple Calculator 
-7. [x] Find the Largest Number
-8. [x] Palindrome Checker
-9. [x] Fibonacci Sequence 
-10. [x] Prime Number Checker
+## C# Learning
 
-## Intermediate
-1. [x] Array Sorting 
-2. [x] Reverse a String 
-3. [x] Find the Largest and Smallest in Array 
-4. [x] Count Vowels and Consonants 
-5. [x] Armstrong Number Checker 
-6. [ ] Matrix Addition 
-7. [x] Binary to Decimal Conversion
-8. [ ] Unique Elements in Array  
-9. [ ] Frequency Count
-10. [ ] Caesar Cipher 
- 
+## Basics
+```csharp
+dotnet --version // check version .net sdk
+dotnet new console -o <projectName> // creat console project
+dotnet run // start project
+```
+
+### Input and Output
+
+```csharp
+var input = Console.ReadLine();
+Console.Write(input + "Hello");  
+Console.WriteLine($"{input} Hello");  
+```
+
+### Variables
+
+```csharp
+const var staticName = "phanuphun" 
+var name = "john"; // compiler will infer the type on value assigned value
+
+int num = 25; // 4 bytes
+long numling = 222; // 8 bytes
+float pi = 3.14; // 4 byptes
+double temp = 3.1235; // 8 bytes
+
+string name = "Alice";
+char letter = 'A';
+bool isTrue = false;
+
+int num1 = 90, num2=99 , num3=109;  
+```
+
+### Nullable Type
+```csharp
+// use ? for allow variable can be null
+int? nullableInt = null;
+nullableInt = 10;
+
+// nullable type property
+nullableInt.Value; // => 10
+nullableInt.HasValue; // => true
+nullableInt = null;
+nullableInt.HasValue; // => false
+
+//example use with try catch
+try{
+    int? nullableInt = null;
+
+    // if you try to access variable , InvalidOperationException err will trigger 
+    Console.WriteLine(nullableInt.Value); 
+}catch(InvalidOperationException err){
+    Console.WriteLine("Err :" + err);
+}
+
+```
+### Char and String Methods
+```csharp
+// string method
+string msg = "Hello";
+msg[0]; // => 'H'
+msg.ToUpper(); // => "HELLO"
+msg.ToLower(); // => "hello"
+msg.Trim(); 
+msg.Contains("Hel")  
+msg.StartsWith("He")  
+msg.EndsWith("lo") 
+
+// trick use contain checking letter
+char letter = 'a'; 
+("aeiou").Contains(letter); // => true 
+
+// char method , return true and false
+Char.isLetter('a');  
+Char.IsUpper('A');  
+Char.IsLower('A');  
+Char.IsDigit('2');
+Char.IsWhiteSpace(' ');
+```
+
+### Type Casting
+```csharp
+double pi = 3.14; 
+int piInt = (int)pi; // => 3
+
+// Convert Method
+Convert.ToString();  
+Convert.ToInt32(); // to int
+Convert.ToInt64(); // to long
+Convert.ToDouble();  
+
+int price = Convert.ToInt32(ReadLind()); // convert string => int
+```
+
+### Math
+```csharp
+Math.Round(3.1568, 3); // => 3.157
+Math.Pow(2,3); // 2^3 => 8
+Math.Sqrt(81); // => 9
+Math.Abs(-10); // => 10
+```
+
+## Array
+### Static Array
+```csharp
+int[] arrNum; // unknow size
+arrNum = new int[] {2,5,4,9}; // add values
+
+string[] arrName = new string[4]; // defind size
+
+int[] arrNums = {1,2,3,4,5}; //  define the variable with {}
+
+// static method
+Array.Reverse(arrNums); // => [5,4,3,2,1]
+Array.Sort(arrNum); => // => [2,4,5,9] 
+Array.IndexOf(arrNums,5); // => index 0
+Array.Fill(arrNums); // => [10,10,10,10,10]
+Array.Exists(arrNums, n => n == 3) // true
+Array.Clear();
+```
+
+### Dynamic Array
+```csharp
+List<T> arr = new List<T>();
+List<T> arr2 = new List<T> {2,5,8,66,7}; 
+
+// instant method
+arr.Add(value); // add new value
+arr.Remove(Value); // delete by using value
+arr.RemoveAt(Index); // delete by using index 
+arr.Reverse(); // reverse value aligment in arr
+arr.Contains(value); // check value in arr => true / false
+arr.IndexOf(value); // finding value index
+arr.Clear(); // delete all values
+```
+
+### Array Conversion
+```csharp
+// string => char[]
+string msg = "hello";
+Char[] arrMsg = msg.ToCharArray(); // ['h','e','l','l',o]
+
+// arr to list
+int[] arr = { 1, 2, 3, 4, 5 };
+List<int> list = arr.ToList(); 
+```
