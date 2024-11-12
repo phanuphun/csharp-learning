@@ -3,49 +3,21 @@ using System.Diagnostics.CodeAnalysis;
 
 public class Intermediate
 {
-    public void ArraySorting(int[] arr)
-    {
-        Array.Sort(arr);
-        foreach (var item in arr)
-        {
-            Console.Write(item + " ");
-        }
-    }
-
-    public void ReverseAString(string message)
-    {
-        Char[] arr = message.ToCharArray();
-        Array.Reverse(arr);
-        foreach (var item in arr)
-        {
-            Console.Write(item + " ");
-        }
-    }
-
-    public void FindLargestAndSmall(int[] arrNumbers)
-    {
-        int max = arrNumbers.Max();
-        int min = arrNumbers.Min();
-
-        Console.WriteLine("max " + max);
-        Console.WriteLine("max " + min);
-    }
-
     public void CountVowelsAndConsonants(string message)
     {
+        // นับจำนวนสระ , และตัวอักษรพยัญชนะในข้อความ
+        // สามารถใช้ .isLetter ได้เพื่อตรวจสอบว่าเป็นตัวอักษรหรือไม่
+        // ('aeiou').Contain(); ใช้ตรวจสอบ string ที่มีสระได้ 
         message = message.ToLower();
 
-        Char[] arrMessage = message.ToCharArray();
+        char[] arrMessage = message.ToCharArray();
 
         int vowelsCounting = 0;
         int ConsonantsCounting = 0;
         int anotherCounting = 0;
 
-        // สามารถใช้ .isLetter ได้เพื่อตรวจสอบว่าเป็นตัวอักษรหรือไม่
-        // ('aeiou').Contain(); ใช้ตรวจสอบ string ที่มีสระได้ 
-
-        Char[] vowels = ['a', 'e', 'i', 'O', 'u'];
-        Char[] Consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+        char[] vowels = ['a', 'e', 'i', 'O', 'u'];
+        char[] Consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
 
         for (int i = 0; i < message.Length; i++)
         {
@@ -71,10 +43,8 @@ public class Intermediate
 
     public void ArmstrongChecker(int number)
     {
-
         // เลข 153 มี 3 หลัก
         // ถ้ายกกำลังแต่ละหลัก (1^3 + 5^3 + 3^3) จะได้ 153 ซึ่งเท่ากับตัวเลขเดิม ดังนั้น 153 เป็น Armstrong Number
-
         // 9474 มี 4 หลัก
         // 9^4 + 4^4 + 7^4 + 4^4 = 6561 + 256 + 2401 + 256 = 9474 ซึ่งเท่ากับตัวเลขเดิม เป็น Armstrong Number
 
@@ -110,20 +80,14 @@ public class Intermediate
         else Console.WriteLine(baseNumber + " is not Armstrong Number");
     }
 
-    public void MetrixAddition(int[,] metrix1, int[,] metrix2)
-    {
-        // รับเมทริกซ์ขนาด 2x2 หรือ 3x3 สองเมทริกซ์ แล้วทำการบวกเมทริกซ์ทั้งสอง
-
-    }
-
     public void BinaryToDecimal(int base2)
     {
         // รับเลขฐานสองจากผู้ใช้แล้วแปลงเป็นเลขฐานสิบ
         // input => 110111
         // output => 55
         // หลักการ การกระจาย
-        // 110111 ฐ2 => (1*2^5)+(1*2^4)+(0*2^3)+(1*2^2)+(1*2^1)+(1*2^0)
-        // => (1x32)+(1x16)+(0x8)+(1x4)+(1x2)+(1x1) = 55 ฐ10
+        // 110111 ฐ2 => (1 * 2^5) + (1 * 2^4) + (0 * 2^3) + (1 * 2^2) + (1 * 2^1) + (1 * 2^0)
+        // => (1x32) + (1x16) + (0x8) + (1x4) + (1x2) + (1x1) = 55 ฐ10
 
         string base2String = base2.ToString();
         Char[] arrBase2 = base2String.ToCharArray();
@@ -147,17 +111,7 @@ public class Intermediate
         Console.WriteLine($"{base2} => {sum}");
     }
 
-    public void UniqInElementInArray()
-    {
-        // รับอาร์เรย์ของตัวเลข แล้วแสดงค่าที่ไม่ซ้ำกันในอาร์เรย์นั้น
-    }
-
-    public void FrequencyCount()
-    {
-        // รับอาร์เรย์ของตัวเลขแล้วนับจำนวนครั้งที่แต่ละตัวเลขปรากฏในอาร์เรย์
-    }
-
-    public void SS()
+    public void CaesarCipher()
     {
         // รับข้อความและเลขจำนวนการเลื่อนจากผู้ใช้ แล้วทำการเข้ารหัส Caesar Cipher
     }
