@@ -2,7 +2,21 @@
 This repository stores my C# learning files, including problem-solving exercises, experiments with new techniques, and my personal notes.
 
 ## Table of contents
-- [Basics](#Input and Output)
+- [C# Learning](#c-learning)
+  - [Table of contents](#table-of-contents)
+  - [Basics](#basics)
+    - [Input and Output](#input-and-output)
+    - [Variables](#variables)
+    - [Nullable Type](#nullable-type)
+    - [Char and String Methods](#char-and-string-methods)
+    - [Type Casting](#type-casting)
+    - [Math](#math)
+    - [If-else](#if-else)
+  - [Array](#array)
+    - [Static Array](#static-array)
+    - [Dynamic Array](#dynamic-array)
+    - [Array Conversion](#array-conversion)
+
 
 ## Basics
 ```csharp
@@ -104,6 +118,17 @@ Math.Round(3.1568, 3); // => 3.157
 Math.Pow(2,3); // 2^3 => 8
 Math.Sqrt(81); // => 9
 Math.Abs(-10); // => 10
+```
+
+### If-else
+```csharp
+if(condition){}
+if(condition){} else{}
+if(condition)() else if(condition2){} else{}
+
+// short hand
+if (condition) ? statement... : elseStetement... ;
+string name = (condition)? "newName" : "defaultName" ; // usage
 ```
 
 ## Array
