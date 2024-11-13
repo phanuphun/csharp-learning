@@ -5,9 +5,10 @@ public class ArrayPractice
         // รับเมทริกซ์ขนาด 2x2 หรือ 3x3 สองเมทริกซ์ แล้วทำการบวกเมทริกซ์ทั้งสอง
     }
 
-    public void UniqInElementInArray()
+    public void UniqInElementInArray(int[] arr)
     {
         // รับอาร์เรย์ของตัวเลข แล้วแสดงค่าที่ไม่ซ้ำกันในอาร์เรย์นั้น
+        
     }
 
     public void FrequencyCount()

@@ -1,4 +1,8 @@
-## C# Learning
+# C# Learning
+This repository stores my C# learning files, including problem-solving exercises, experiments with new techniques, and my personal notes.
+
+## Table of contents
+- [Basics](#Input and Output)
 
 ## Basics
 ```csharp
@@ -140,9 +144,13 @@ arr.Clear(); // delete all values
 ```csharp
 // string => char[]
 string msg = "hello";
-Char[] arrMsg = msg.ToCharArray(); // ['h','e','l','l',o]
+char[] arrMsg = msg.ToCharArray(); // => ['h','e','l','l',o]
 
-// arr to list
+// char[] => string
+char arrVowels = {'a','e','i','o','u'};
+string vowels = new string(arrVowels); // => "aeiou"
+
+// arr => list
 int[] arr = { 1, 2, 3, 4, 5 };
 List<int> list = arr.ToList(); 
 ```
