@@ -7,9 +7,11 @@
 // ptTwo.MetrixAddition(mt3, mt4);
 // ptTwo.BinaryToDecimal(101101);
 
-
 ArrayBasic arrb = new ArrayBasic();
 // arrb.ArrayBubbleSort([8,5,2,3,8,4,6,1,10,5]);
 // arrb.ReverseString("Civic");
 // arrb.FindLargestAndSmall([0,11,9,2,99,5]);
 
+ChildTwo c2 = new ChildTwo();
+Console.WriteLine(c2.doubleSum(5,5));
+c2.show("Hello C2");
