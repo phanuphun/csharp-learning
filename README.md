@@ -3,7 +3,6 @@
 This repository stores my C# learning files, including problem-solving exercises, experiments with new techniques, and my personal notes.
 
 ## Table of contents
-
 - [C# Learning](#c-learning)
   - [Table of contents](#table-of-contents)
   - [Basics](#basics)
@@ -19,11 +18,13 @@ This repository stores my C# learning files, including problem-solving exercises
     - [Dynamic Array](#dynamic-array)
     - [Array Conversion](#array-conversion)
   - [OOP](#oop)
-    - [Basic Structure and Encapsulate](#basic-structure-and-encapsulate)
+    - [Basic](#basic)
     - [Ineritantce](#ineritantce)
     - [Override](#override)
     - [Abstract](#abstract)
-  - [Interface](#interface)
+    - [Interface](#interface)
+
+
 
 ## Basics
 
@@ -200,7 +201,7 @@ List<int> list = arr.ToList();
 
 ## OOP
 
-### Basic Structure and Encapsulate
+### Basic
 
 ```csharp
 // Test.cs
@@ -346,7 +347,7 @@ two.doubleSum(5,5); //=> 0
 two.show("hello world"); // => hello world
 ```
 
-## Interface
+### Interface
 
 ```csharp
 // create interface
@@ -375,8 +376,7 @@ class One:Parent
    }
 }
 
-class Two:Parent
-{
+class Two:Parent{
    public int plusTen(int n1)
    {
       return n1 + 100;
